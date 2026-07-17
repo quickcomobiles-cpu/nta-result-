@@ -3,55 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Document Access Portal</title>
+    <title>NATIONAL ELIGIBILITY CUM ENTRANCE TEST (UG) - 2026</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f6f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .verification-container { background: white; padding: 30px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center; border-top: 4px solid #002e5b; }
-        h3 { color: #222; margin: 0 0 5px 0; font-size: 20px; }
-        .sub-title { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 25px; }
-        .form-group { text-align: left; margin-bottom: 20px; }
-        label { display: block; font-size: 13px; color: #444; margin-bottom: 6px; font-weight: bold; }
-        input[type="text"] { width: 94%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
-        .captcha-wrapper { display: flex; align-items: center; justify-content: space-between; background: #fafafa; padding: 10px; border: 1px dashed #bbb; border-radius: 4px; margin-bottom: 20px; }
-        .captcha-text { background: #00008b; color: white; font-weight: bold; font-family: monospace; font-size: 20px; letter-spacing: 3px; padding: 6px 15px; border-radius: 3px; user-select: none; }
-        .refresh-btn { background: none; border: none; color: #0275d8; font-size: 20px; cursor: pointer; font-weight: bold; }
-        .btn-submit { width: 100%; padding: 12px; background-color: #00875a; color: white; border: none; border-radius: 4px; font-size: 15px; cursor: pointer; font-weight: bold; text-transform: uppercase; }
-        .btn-submit:hover { background-color: #006644; }
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; }
+        
+        /* Official Styled Multi-Header Grid Alignment */
+        .header-banner { width: 100%; max-width: 1200px; margin: auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; background: white; box-sizing: border-box; }
+        .logo-placeholder-left { font-size: 12px; font-weight: bold; color: #222; border-left: 3px solid #002e5b; padding-left: 10px; line-height: 1.3; }
+        .logo-placeholder-left span { font-size: 11px; color: #555; font-weight: normal; }
+        .header-text { text-align: center; font-weight: bold; color: #111; font-size: 15px; line-height: 1.4; flex-grow: 1; padding: 0 20px; }
+        .logo-placeholder-right { text-align: right; font-size: 11px; font-weight: bold; color: #444; line-height: 1.4; }
+        .logo-badge { display: inline-block; padding: 3px 8px; background: #f0f4f8; border-radius: 3px; margin-top: 3px; font-size: 10px; color: #002e5b; }
+        
+        .blue-divider-bar { width: 100%; height: 35px; background-color: #002e5b; margin: 0; padding: 0; }
+        
+        /* Central Login Box Parameters */
+        .main-container { max-width: 680px; margin: 50px auto; background: white; border: 1px solid #d2d6de; box-shadow: 0px 4px 12px rgba(0,0,0,0.08); border-radius: 3px; overflow: hidden; }
+        .card-header { background-color: #002e5b; color: white; padding: 10px 15px; font-weight: bold; font-size: 15px; display: flex; align-items: center; letter-spacing: 0.5px; }
+        .card-body { padding: 35px 25px; display: flex; flex-direction: column; align-items: center; }
+        
+        .form-group { display: flex; width: 100%; max-width: 520px; margin-bottom: 15px; align-items: center; }
+        .form-label { width: 45%; font-size: 13px; color: #222; text-align: right; padding-right: 15px; font-weight: 500; }
+        .form-input { width: 55%; padding: 7px; border: 1px solid #b5bbc8; font-size: 14px; border-radius: 2px; }
+        .form-input:focus { border-color: #3c8dbc; outline: none; }
+        
+        .captcha-container { display: flex; align-items: center; width: 100%; max-width: 520px; margin-bottom: 20px; padding-left: 45%; box-sizing: border-box; }
+        .captcha-image-box { background: #00008b; color: white; font-weight: bold; font-size: 19px; letter-spacing: 2px; padding: 5px 15px; font-family: monospace; border-radius: 2px; user-select: none; }
+        .refresh-btn { font-size: 18px; color: #28a745; margin-left: 10px; cursor: pointer; background: none; border: none; font-weight: bold; }
+        
+        .submit-btn { background-color: #00875a; color: white; border: none; padding: 8px 28px; font-weight: bold; font-size: 13px; border-radius: 2px; cursor: pointer; margin-left: 45%; text-transform: uppercase; letter-spacing: 0.5px; }
+        .submit-btn:hover { background-color: #006644; }
+        
+        .footer { width: 100%; background-color: #001f3f; color: white; text-align: center; padding: 12px 0; font-size: 11px; position: fixed; bottom: 0; left: 0; letter-spacing: 0.3px; }
     </style>
 </head>
 <body>
 
-<div class="verification-container">
-    <h3>SECURE DATA PORTAL</h3>
-    <div class="sub-title">Document Verification Gateway</div>
-    
-    <div class="form-group">
-        <label>Security Pin Validation (Case Sensitive)</label>
-        <div class="captcha-wrapper">
-            <!-- Custom Dynamic Verification Pin -->
-            <div class="captcha-text">xg87DG</div>
-            <button class="refresh-btn" type="button" onclick="alert('Security Pin Refreshed!')">⟳</button>
+    <!-- Header Section -->
+    <div class="header-banner">
+        <div class="logo-placeholder-left">
+            Department of Higher Education<br>
+            <b>Ministry of Education</b><br>
+            <span>Government of India</span>
         </div>
-        <input type="text" id="userVerificationInput" placeholder="Enter security pin shown above" autocomplete="off">
+        <div class="header-text">
+            NATIONAL ELIGIBILITY CUM ENTRANCE TEST (UG) – 2026<br>
+            <span style="font-weight: normal; font-size: 14px; color: #444;">Score Card</span>
+        </div>
+        <div class="logo-placeholder-right">
+            National Testing Agency<br>
+            <span style="color: green;">राष्ट्रीय परीक्षा एजेंसी</span><br>
+            <div class="logo-badge">NMC Validated</div>
+        </div>
     </div>
-    
-    <button class="btn-submit" onclick="checkAccess()">Submit Request</button>
-</div>
 
-<script>
-    function checkAccess() {
-        var generatedPin = "xg87DG";
-        var userEnteredValue = document.getElementById("userVerificationInput").value.trim();
-        
-        if (userEnteredValue === generatedPin) {
-            // Forwarding directly to your uploaded Google Drive PDF link
-            window.location.href = "https://google.com";
-        } else {
-            alert("Security Pin Incorrect. Please re-enter the characters correctly.");
-            document.getElementById("userVerificationInput").value = "";
+    <!-- Blue Visual Separator Bar -->
+    <div class="blue-divider-bar"></div>
+
+    <!-- View Result Grid Block -->
+    <div class="main-container">
+        <div class="card-header">&#128196; View Result</div>
+        <div class="card-body">
+            
+            <div class="form-group">
+                <div class="form-label">Enter CAPTCHA (case sensitive) :</div>
+                <input type="text" id="enteredCaptcha" class="form-input" autocomplete="off">
+            </div>
+
+            <div class="captcha-container">
+                <div class="captcha-image-box">xg87DG</div>
+                <button type="button" class="refresh-btn" onclick="alert('Security Pin Reset Successful!')">⟳</button>
+            </div>
+
+            <button onclick="handleVerification()" class="submit-btn">SUBMIT</button>
+            
+        </div>
+    </div>
+
+    <!-- Bottom Page Footer -->
+    <div class="footer">
+        This site is designed and hosted by NIC PEP Division. The contents are provided by NTA. For any further information, please contact NTA.
+    </div>
+
+    <script>
+        function handleVerification() {
+            var officialCaptchaCode = "xg87DG";
+            var userValue = document.getElementById("enteredCaptcha").value.trim();
+
+            if (userValue === officialCaptchaCode) {
+                // Instantly routes directly to your existing secure Google Drive file link
+                window.location.href = "https://google.com";
+            } else {
+                alert("Incorrect CAPTCHA! Code is case sensitive. Please re-enter xg87DG.");
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
 </html>
