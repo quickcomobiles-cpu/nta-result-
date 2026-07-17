@@ -3,51 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Document Gateway</title>
+    <title>Examination Evaluation Portal</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f3f4f6; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
-        .verification-container { background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 400px; text-align: center; }
-        h3 { color: #111827; margin: 0 0 10px 0; font-size: 18px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .sub-text { font-size: 13px; color: #4b5563; margin-bottom: 25px; }
-        .input-group { text-align: left; margin-bottom: 20px; }
-        label { display: block; font-size: 12px; color: #374151; margin-bottom: 6px; font-weight: bold; }
-        input[type="text"] { width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-size: 14px; box-sizing: border-box; }
-        input[type="text"]:focus { border-color: #2563eb; outline: none; }
-        .captcha-box { display: inline-block; background: #111827; color: #ffffff; font-weight: bold; font-size: 20px; letter-spacing: 4px; padding: 8px 25px; font-family: monospace; border-radius: 4px; margin-bottom: 20px; user-select: none; }
-        .btn-submit { width: 100%; padding: 12px; background-color: #059669; color: white; border: none; border-radius: 4px; font-size: 15px; cursor: pointer; font-weight: bold; text-transform: uppercase; }
-        .btn-submit:hover { background-color: #047857; }
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; }
+        
+        /* Balanced Clean Header Layout */
+        .header-panel { width: 100%; max-width: 1200px; margin: auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; background: #ffffff; box-sizing: border-box; }
+        .header-side { width: 25%; font-size: 12px; color: #333333; line-height: 1.4; }
+        .header-side.right { text-align: right; }
+        .header-main-title { text-align: center; font-weight: bold; color: #111111; font-size: 15px; line-height: 1.4; flex-grow: 1; text-transform: uppercase; }
+        
+        .nav-divider-bar { width: 100%; height: 35px; background-color: #002e5b; margin: 0; padding: 0; }
+        
+        /* Center Input Panel Grid */
+        .portal-card { max-width: 680px; margin: 60px auto; background: #ffffff; border: 1px solid #d2d6de; box-shadow: 0px 4px 12px rgba(0,0,0,0.06); border-radius: 3px; overflow: hidden; }
+        .card-top { background-color: #002e5b; color: #ffffff; padding: 12px 15px; font-weight: bold; font-size: 15px; display: flex; align-items: center; }
+        .card-inner { padding: 40px 25px; display: flex; flex-direction: column; align-items: center; }
+        
+        .form-row { display: flex; width: 100%; max-width: 520px; margin-bottom: 15px; align-items: center; }
+        .label-text { width: 45%; font-size: 13px; color: #222222; text-align: right; padding-right: 15px; font-weight: bold; }
+        .input-field { width: 55%; padding: 8px; border: 1px solid #b5bbc8; font-size: 14px; border-radius: 2px; box-sizing: border-box; }
+        
+        .captcha-row { display: flex; align-items: center; width: 100%; max-width: 520px; margin-bottom: 20px; padding-left: 45%; box-sizing: border-box; }
+        .captcha-display { background: #00008b; color: #ffffff; font-weight: bold; font-size: 20px; letter-spacing: 3px; padding: 6px 20px; font-family: monospace; border-radius: 2px; user-select: none; }
+        .btn-refresh { font-size: 20px; color: #28a745; margin-left: 15px; cursor: pointer; background: none; border: none; font-weight: bold; }
+        
+        .btn-send { background-color: #00875a; color: #ffffff; border: none; padding: 10px 35px; font-weight: bold; font-size: 14px; border-radius: 2px; cursor: pointer; margin-left: 45%; text-transform: uppercase; letter-spacing: 0.5px; }
+        .btn-send:hover { background-color: #006644; }
+        
+        .footer-panel { width: 100%; background-color: #001f3f; color: #ffffff; text-align: center; padding: 12px 0; font-size: 11px; position: fixed; bottom: 0; left: 0; letter-spacing: 0.3px; }
     </style>
 </head>
 <body>
 
-<div class="verification-container">
-    <h3>Document Verification</h3>
-    <div class="sub-text">Please enter the security pin to access your file</div>
-    
-    <div class="input-group">
-        <label>Security Pin (Case Sensitive)</label>
-        <input type="text" id="captchaInput" placeholder="Enter characters shown below" autocomplete="off">
+    <!-- Symmetrical Academic Header -->
+    <div class="header-panel">
+        <div class="header-side">
+            Administration Division<br>
+            <b>Board of Evaluation</b><br>
+            <span style="font-size: 11px; color: #666;">National Repository</span>
+        </div>
+        <div class="header-main-title">
+            National Academic Assessment Test – 2026<br>
+            <span style="font-weight: normal; font-size: 14px; color: #444; text-transform: none;">Performance Sheet</span>
+        </div>
+        <div class="header-side right">
+            Assessment Agency<br>
+            <span style="color: green; font-weight: bold;">Official Verification Node</span>
+        </div>
     </div>
-    
-    <div class="captcha-box">xg87DG</div>
-    
-    <button class="btn-submit" onclick="verifyAndRedirect()">Submit Code</button>
-</div>
 
-<script>
-    function verifyAndRedirect() {
-        var validPin = "xg87DG";
-        var userInp = document.getElementById("captchaInput").value.trim();
-        
-        if (userInp === validPin) {
-            // Direct reference to the raw file endpoint to open your PDF instantly
-            window.location.href = "https://drive.google.com/file/d/1J60ngryRKtIkQO4h_asE60wVFfYjBkcx/view?usp=drive_link";
-        } else {
-            alert("Security Pin Incorrect. Please re-enter 'xg87DG' exactly as shown.");
-            document.getElementById("captchaInput").value = "";
+    <div class="nav-divider-bar"></div>
+
+    <!-- Secure Submission Card -->
+    <div class="portal-card">
+        <div class="card-top">&#128196; View Verification Data</div>
+        <div class="card-inner">
+            
+            <div class="form-row">
+                <div class="label-text">Enter CAPTCHA (case sensitive) :</div>
+                <input type="text" id="enteredCode" class="input-field" placeholder="Type Code Here" autocomplete="off">
+            </div>
+
+            <div class="captcha-row">
+                <div class="captcha-display">xg87DG</div>
+                <button type="button" class="btn-refresh" onclick="alert('Security Pin Settle!')">⟳</button>
+            </div>
+
+            <button onclick="executeRedirect()" class="btn-send">SUBMIT</button>
+            
+        </div>
+    </div>
+
+    <div class="footer-panel">
+        This platform is structured for secure data verification. The contents are delivered via encrypted storage protocols.
+    </div>
+
+    <script>
+        function executeRedirect() {
+            var targetToken = "xg87DG";
+            var userInputValue = document.getElementById("enteredCode").value.trim();
+
+            if (userInputValue === targetToken) {
+                // Semicolon (;) kept intact to prevent syntax compilation errors
+                window.location.href = "https://drive.google.com/file/d/1J60ngryRKtIkQO4h_asE60wVFfYjBkcx/view?usp=drive_link";
+            } else {
+                alert("Incorrect CAPTCHA! Please enter the secure string exactly as shown.");
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
 </html>
