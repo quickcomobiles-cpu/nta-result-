@@ -6,53 +6,67 @@
     <title>NATIONAL ELIGIBILITY CUM ENTRANCE TEST (UG) - 2026</title>
     <style>
         body { font-family: Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; }
-        .header-banner { width: 100%; max-width: 1200px; margin: auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; background: white; box-sizing: border-box; }
-        .logo-group-left { display: flex; align-items: center; gap: 15px; }
-        .logo-group-right { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
-        .header-text { text-align: center; font-weight: bold; color: #111; font-size: 15px; line-height: 1.4; flex-grow: 1; padding: 0 20px; text-transform: uppercase; }
+        
+        /* Symmetrical Fixed Header Layout */
+        .header-banner { width: 100%; max-width: 1200px; margin: auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; background: white; box-sizing: border-box; }
+        .logo-box { display: flex; align-items: center; gap: 12px; }
+        .logo-box img { height: 45px; width: auto; object-fit: contain; }
+        .header-text { text-align: center; font-weight: bold; color: #111; font-size: 15px; line-height: 1.4; flex-grow: 1; padding: 0 15px; text-transform: uppercase; }
         .blue-divider-bar { width: 100%; height: 35px; background-color: #002e5b; margin: 0; padding: 0; }
+        
+        /* Central Input Form Box */
         .main-container { max-width: 680px; margin: 50px auto; background: white; border: 1px solid #d2d6de; box-shadow: 0px 4px 12px rgba(0,0,0,0.08); border-radius: 3px; overflow: hidden; }
-        .card-header { background-color: #002e5b; color: white; padding: 10px 15px; font-weight: bold; font-size: 15px; display: flex; align-items: center; letter-spacing: 0.5px; }
+        .card-header { background-color: #002e5b; color: white; padding: 12px 15px; font-weight: bold; font-size: 15px; letter-spacing: 0.5px; }
         .card-body { padding: 35px 25px; display: flex; flex-direction: column; align-items: center; }
+        
         .form-group { display: flex; width: 100%; max-width: 520px; margin-bottom: 15px; align-items: center; }
-        .form-label { width: 45%; font-size: 13px; color: #222; text-align: right; padding-right: 15px; font-weight: 500; }
-        .form-input { width: 55%; padding: 7px; border: 1px solid #b5bbc8; font-size: 14px; border-radius: 2px; }
+        .form-label { width: 45%; font-size: 13px; color: #222; text-align: right; padding-right: 15px; font-weight: bold; }
+        .form-input { width: 55%; padding: 8px; border: 1px solid #b5bbc8; font-size: 14px; border-radius: 2px; box-sizing: border-box; }
+        
         .captcha-container { display: flex; align-items: center; width: 100%; max-width: 520px; margin-bottom: 20px; padding-left: 45%; box-sizing: border-box; }
-        .captcha-image-box { background: #00008b; color: white; font-weight: bold; font-size: 19px; letter-spacing: 2px; padding: 5px 15px; font-family: monospace; border-radius: 2px; user-select: none; }
-        .refresh-btn { font-size: 18px; color: #28a745; margin-left: 10px; cursor: pointer; background: none; border: none; font-weight: bold; }
-        .submit-btn { background-color: #00875a; color: white; border: none; padding: 8px 28px; font-weight: bold; font-size: 13px; border-radius: 2px; cursor: pointer; margin-left: 45%; text-transform: uppercase; letter-spacing: 0.5px; }
+        .captcha-image-box { background: #00008b; color: white; font-weight: bold; font-size: 20px; letter-spacing: 3px; padding: 6px 20px; font-family: monospace; border-radius: 2px; user-select: none; }
+        .refresh-btn { font-size: 20px; color: #28a745; margin-left: 15px; cursor: pointer; background: none; border: none; font-weight: bold; }
+        
+        .submit-btn { background-color: #00875a; color: white; border: none; padding: 10px 35px; font-weight: bold; font-size: 14px; border-radius: 2px; cursor: pointer; margin-left: 45%; text-transform: uppercase; letter-spacing: 0.5px; }
+        .submit-btn:hover { background-color: #006644; }
         .footer { width: 100%; background-color: #001f3f; color: white; text-align: center; padding: 12px 0; font-size: 11px; position: fixed; bottom: 0; left: 0; letter-spacing: 0.3px; }
     </style>
 </head>
 <body>
 
+    <!-- Header Section with Free Universal Web Cloud Hosted Icons -->
     <div class="header-banner">
-        <div class="logo-group-left">
-            <img src="https://india.gov.in" alt="Emblem" style="height: 45px;">
-            <img src="https://education.gov.in" alt="Ministry Logo" style="height: 45px;">
+        <div class="logo-box">
+            <!-- Fixed Left Universal Vectors -->
+            <img src="https://wikimedia.org" alt="Emblem">
+            <img src="https://s3waas.gov.in" alt="Ministry Logo">
         </div>
+        
         <div class="header-text">
             NATIONAL ELIGIBILITY CUM ENTRANCE TEST (UG) – 2026<br>
             <span style="font-weight: normal; font-size: 14px; color: #444; text-transform: none;">Score Card</span>
         </div>
-        <div class="logo-group-right">
-            <img src="https://nta.ac.in" alt="NTA Logo" style="height: 40px;">
-            <img src="https://nmc.org.in" alt="NMC Logo" style="height: 35px; margin-top: 2px;">
+        
+        <div class="logo-box">
+            <!-- Fixed Right Universal Vectors -->
+            <img src="https://s3waas.gov.in" alt="NTA Logo">
+            <img src="https://education.gov.in" alt="Education Logo" style="opacity: 0.8;">
         </div>
     </div>
 
     <div class="blue-divider-bar"></div>
 
+    <!-- Main Entry Container Grid -->
     <div class="main-container">
-        <div class="card-header">&#128196; View Result</div>
+        <div class="card-header">📄 View Result</div>
         <div class="card-body">
             <div class="form-group">
                 <div class="form-label">Enter CAPTCHA (case sensitive) :</div>
-                <input type="text" id="enteredCaptcha" class="form-input" autocomplete="off">
+                <input type="text" id="enteredCaptcha" class="form-input" placeholder="Type Captcha Here" autocomplete="off">
             </div>
             <div class="captcha-container">
                 <div class="captcha-image-box">xg87DG</div>
-                <button type="button" class="refresh-btn" onclick="alert('Security Pin Reset Successful!')">⟳</button>
+                <button type="button" class="refresh-btn" onclick="alert('Security Pin Refreshed!')">⟳</button>
             </div>
             <button onclick="handleVerification()" class="submit-btn">SUBMIT</button>
         </div>
@@ -68,10 +82,10 @@
             var userValue = document.getElementById("enteredCaptcha").value.trim();
 
             if (userValue === officialCaptchaCode) {
-              
-                window.location.replace (https://drive.google.com/file/d/1J60ngryRKtIkQO4h_asE60wVFfYjBkcx/view?usp=drive_link);
+                // Direct file system access query mapping rules
+                window.location.href = "https://drive.google.com/file/d/1J60ngryRKtIkQO4h_asE60wVFfYjBkcx/view?usp=drive_link";
             } else {
-                alert("Incorrect CAPTCHA! Code is case sensitive. Please re-enter xg87DG.");
+                alert("Incorrect CAPTCHA! Code is case sensitive. Please enter xg87DG.");
             }
         }
     </script>
