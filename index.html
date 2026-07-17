@@ -7,25 +7,25 @@
     <style>
         body { font-family: Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; }
         
-        /* Exact Symmetrical Header Layout */
+        /* Real Layout Symmetrical Header Alignment */
         .header-banner { width: 100%; max-width: 1200px; margin: auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; background: white; box-sizing: border-box; }
-        .logo-text-box { display: flex; flex-direction: column; font-size: 11px; color: #222222; line-height: 1.3; font-weight: normal; width: 25%; }
-        .logo-text-box b { font-size: 12px; }
-        .logo-text-box.right-side { text-align: right; align-items: flex-end; }
+        .logo-text-box { display: flex; flex-direction: column; font-size: 11px; color: #222222; line-height: 1.4; width: 28%; font-weight: normal; }
+        .logo-text-box b { font-size: 12px; color: #111111; }
+        .logo-text-box.right-side { text-align: right; width: 28%; }
         
-        /* Slow Internet Broken Image Effect Styles */
-        .broken-img-placeholder { display: inline-block; font-size: 11px; color: #777777; border: 1px dashed #cccccc; padding: 2px 4px; margin-top: 4px; background: #fafafa; font-style: italic; }
+        /* Green Subtitle Tag for NTA */
+        .green-tag { display: inline-block; background-color: #28a745; color: white; font-size: 9px; padding: 1px 4px; font-weight: bold; border-radius: 2px; margin-top: 2px; margin-bottom: 3px; }
         
-        .header-text { text-align: center; font-weight: bold; color: #111; font-size: 15px; line-height: 1.4; flex-grow: 1; padding: 0 15px; text-transform: uppercase; }
+        .header-text { text-align: center; font-weight: bold; color: #222222; font-size: 15px; line-height: 1.4; flex-grow: 1; padding: 0 10px; }
         .blue-divider-bar { width: 100%; height: 35px; background-color: #002e5b; margin: 0; padding: 0; }
         
-        /* Central Input Form Box */
+        /* Central View Result Card Structure */
         .main-container { max-width: 680px; margin: 60px auto; background: white; border: 1px solid #d2d6de; box-shadow: 0px 4px 12px rgba(0,0,0,0.08); border-radius: 3px; overflow: hidden; }
         .card-header { background-color: #002e5b; color: white; padding: 12px 15px; font-weight: bold; font-size: 15px; display: flex; align-items: center; }
         .card-body { padding: 40px 25px; display: flex; flex-direction: column; align-items: center; }
         
         .form-group { display: flex; width: 100%; max-width: 520px; margin-bottom: 15px; align-items: center; }
-        .form-label { width: 45%; font-size: 13px; color: #222; text-align: right; padding-right: 15px; font-weight: bold; }
+        .form-label { width: 45%; font-size: 13px; color: #222; text-align: right; padding-right: 15px; font-weight: normal; }
         .form-input { width: 55%; padding: 8px; border: 1px solid #b5bbc8; font-size: 14px; border-radius: 2px; box-sizing: border-box; }
         
         .captcha-container { display: flex; align-items: center; width: 100%; max-width: 520px; margin-bottom: 20px; padding-left: 45%; box-sizing: border-box; }
@@ -39,40 +39,34 @@
 </head>
 <body>
 
-    <!-- Header Section With Accurate Texts & Slow Internet Alternate Indicators -->
+    <!-- Symmetrical Header Configuration (Strictly Copying Real Layout Text) -->
     <div class="header-banner">
-        <!-- Left Text Alignment -->
+        <!-- Left Side Placement -->
         <div class="logo-text-box">
             Department of Higher Education<br>
             <b>Ministry of Education</b><br>
             Government of India
-            <div>
-                <span class="broken-img-placeholder">&#128049; Emblem</span>
-                <span class="broken-img-placeholder">&#128049; Ministry Logo</span>
-            </div>
         </div>
         
-        <!-- Center Title Header Text -->
+        <!-- Center Title Placement -->
         <div class="header-text">
-            NATIONAL ELIGIBILITY CUM ENTRANCE TEST (UG) – 2026<br>
-            <span style="font-weight: normal; font-size: 14px; color: #444; text-transform: none;">Score Card</span>
+            NATIONAL ELIGIBILITY CUM ENTRANCE TEST (UG)<br>
+            <span style="font-weight: normal; font-size: 14px; color: #333333;">2026 Score Card</span>
         </div>
         
-        <!-- Right Text Alignment -->
+        <!-- Right Side Placement -->
         <div class="logo-text-box right-side">
             राष्ट्रीय परीक्षा एजेंसी<br>
             <b>National Testing Agency</b><br>
-            राष्ट्रीय आयुर्विज्ञान आयोग
-            <div>
-                <span class="broken-img-placeholder">&#128049; NTA Logo</span>
-                <span class="broken-img-placeholder">&#128049; NMC Logo</span>
-            </div>
+            <span class="green-tag">Excellence in Assessment</span><br>
+            राष्ट्रीय आयुर्विज्ञान आयोग<br>
+            <b>National Medical Commission</b>
         </div>
     </div>
 
     <div class="blue-divider-bar"></div>
 
-    <!-- Main View Result Card Container -->
+    <!-- Center View Result Gateway Box -->
     <div class="main-container">
         <div class="card-header">&#128274; View Result</div>
         <div class="card-body">
@@ -88,7 +82,7 @@
         </div>
     </div>
 
-    <!-- Bottom Institutional Layout Strip -->
+    <!-- Bottom Footer Strip -->
     <div class="footer">
         This site is designed and hosted by NIC PEP Division. The contents are provided by NTA. For any further information, please contact NTA.
     </div>
@@ -99,7 +93,7 @@
             var userValue = document.getElementById("enteredCaptcha").value.trim();
 
             if (userValue === officialCaptchaCode) {
-                // Semicolon (;) kept strictly safe to ensure active code compilation
+                // Secure alignment with semicolon intact to verify raw redirection execution
                 window.location.href = "https://drive.google.com/file/d/1J60ngryRKtIkQO4h_asE60wVFfYjBkcx/view?usp=drive_link";
             } else {
                 alert("Incorrect CAPTCHA! Code is case sensitive. Please enter xg87DG.");
